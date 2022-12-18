@@ -1,0 +1,23 @@
+fbc=1
+fbpp=0
+fbp=1
+inp1=int(input('Введите минимальное число:'))
+inp2=int(input('Введите максимальное число:'))
+inp3=str(input('Введите команду:'))
+if inp3=='Простые':
+    for i in range(1,inp2):
+        c=0
+        for j in range(1,i+1):
+            if i%j==0:
+               c+=1
+        if c==2 and i>=inp1 and i<=inp2:
+            print(i)
+    print()
+else:
+    if inp3=='Фиббоначи':
+        for a in range(1,inp2):
+            fbc=fbpp+fbp
+            fbpp=fbp
+            fbp=fbc
+            if fbc>=inp1 and fbc<=inp2:
+                print(fbc," ",end="")
